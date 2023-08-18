@@ -6,5 +6,5 @@ export interface User {
   phoneNumber: string;
   firstname: string;
   lastname: string;
-  role: Role
+  role?: Role
 }
