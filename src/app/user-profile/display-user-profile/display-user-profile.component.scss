@@ -1,0 +1,19 @@
+
+::ng-deep  .mat-list .mat-list-item{
+  height:initial!important;
+}
+
+::ng-deep .menu-form-wrapper {
+  max-width: 360px;
+  min-width:280px;
+}
+::ng-deep {  
+  .mat-mdc-menu-panel {  
+    max-width: unset !important;  
+  }  
+}
+
+::ng-deep .mat-mdc-menu-content {
+  padding: 0 10px!important;
+  width: 360px!important;
+}

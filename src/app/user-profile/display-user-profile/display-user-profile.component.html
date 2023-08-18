@@ -1,0 +1,39 @@
+<mat-card >
+  <mat-menu #menu="matMenu" class="menu-form-wrapper" [hasBackdrop]="false">
+     <ng-template matMenuContent let-user ="user"> 
+     <div (click)="$event.stopPropagation()" (keydown)="$event.stopPropagation()">
+   
+      <mat-list>
+        <div mat-subheader>User Profile</div>
+        <mat-list-item>
+          <mat-icon matListItemIcon matTooltip="Name">person</mat-icon>
+          <!-- <span *ngIf="user">{{user!.firstname}} {{user!.lastname}}</span> -->
+          <span >{{user!.firstname}} {{user!.lastname}}</span>
+        </mat-list-item>
+
+        <mat-list-item>
+          <mat-icon matListItemIcon matTooltip="Role">group</mat-icon>
+          <!-- <span *ngIf="user">{{user.role?.name}}</span> -->
+          <span>{{user.role?.name}}</span>
+        </mat-list-item>
+
+        <mat-list-item>
+          <mat-icon matListItemIcon matTooltip="Email">mail</mat-icon>
+          <!-- <span *ngIf="user">{{usser.email}}</span> -->
+          <span >{{user.email}}</span>
+        </mat-list-item>
+
+        <mat-list-item>
+          <mat-icon matListItemIcon matTooltip="Phone number">phone</mat-icon>
+          <!-- <span *ngIf="user">{{user.phoneNumber}}</span> -->
+          <span >{{user.phoneNumber}}</span>
+        </mat-list-item>      
+
+      </mat-list>
+    </div>
+    <mat-card-actions>
+      <button mat-stroked-button color="primary"(click)="closeUserProfile()">Close</button>
+    </mat-card-actions>
+  </ng-template> 
+    </mat-menu>  
+</mat-card>
