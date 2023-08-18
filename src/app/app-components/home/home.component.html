@@ -1,0 +1,16 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav mode="side">
+    <mat-nav-list>
+      <!--<ng-container [ngSwitch]="this.role!.name">-->
+      <ng-container [ngSwitch]="this.roleName">
+        <app-navigation-admin *ngSwitchCase="'Admin'"></app-navigation-admin>
+        <app-navigation-user *ngSwitchCase="'User'"></app-navigation-user>
+      </ng-container> 
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>   
+    <div>
+      <router-outlet> </router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container> 
